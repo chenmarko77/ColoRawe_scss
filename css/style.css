@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root{
     --header-background: #012D63;
     --header-text: #C7C7C7;
     --nike-color: #FFFFFF;
-
+    --button-color: #8E32C6;
 
 }
 
@@ -85,5 +85,73 @@ body{
 .header-menu a:hover{
 font-weight: 400;
 color: var(--nike-color);
+
+}
+
+.main{
+    background-image: url(../img/nike\ main.jpg);
+    width: 1440px;
+    height: 858px;
+    margin: 0 auto;
+}
+
+.main-nike{
+    color: var(--nike-color);
+    width: 160px;
+    height: 120px;
+    margin-top: 94px;
+
+    margin-left: 170px;
+    
+}
+
+.main-call_to_action{
+    color: var(--nike-color);
+}
+
+.main-cqr{
+     font-family: "PT Serif";
+    font-size: 48px;
+    padding-left: 195px;
+}
+
+.main-colorawe-title{
+    font-family: "Playfair Display";
+    font-size: 144px;
+    width: 640px;
+    height: 192px;
+
+    margin-left: 156px;
+}
+
+
+.main-your-dream-nike-text{
+    font-family: "Playfair Display";
+    font-size: 72px;
+    width: 540px;
+    height: 96px;
+
+    margin-left: 156px;
+}
+
+.main-text{
+    font-size: 18px;
+    width: 508px;
+    height: 84px;
+    font-weight: 400;
+    line-height: 21.09px;
+
+    margin-left: 156px;
+    margin-bottom: 41px;
+}
+
+.main-button{
+    width: 254px;
+    height: 67px;
+    font-size: 24px;
+    border-radius: 10px;
+    color: var(--nike-color);
+    background-color: var(--button-color);
+    margin-left: 156px;
 
 }
