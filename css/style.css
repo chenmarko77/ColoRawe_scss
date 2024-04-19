@@ -5,6 +5,7 @@
   --header-text: #c7c7c7;
   --nike-color: #ffffff;
   --button-color: #8e32c6;
+  --main-text: #959595;
 }
 
 body {
@@ -83,9 +84,7 @@ body {
   color: var(--nike-color);
 }
 
-.main {
 
-}
 
 .main-nike {
   color: var(--nike-color);
@@ -102,14 +101,13 @@ body {
   height: 858px;
   margin: 0 auto;
   color: var(--nike-color);
-
 }
 
 .main-cqr {
   font-family: "PT Serif";
   font-size: 48px;
   font-weight: 400;
- }
+}
 
 .main-colorawe-title {
   font-family: "Playfair Display";
@@ -121,20 +119,15 @@ body {
   height: 150px;
 }
 
-.nike-container{
+.nike-container {
   position: relative;
 }
 
-
-.text-c-and-r{
+.text-c-and-r {
   position: absolute;
   bottom: -20px;
   left: 190px;
-
 }
-
-
-
 
 .main-your-dream-nike-text {
   font-family: "Playfair Display";
@@ -261,6 +254,7 @@ body {
   margin: 0 auto;
   justify-content: center;
   flex-direction: column;
+  border: 2px solid var(--nike-color);
 }
 
 .reviews-title {
@@ -295,77 +289,153 @@ body {
   justify-content: space-between;
 }
 
-.reviews-item1, .reviews-item2, .reviews-item3{
+.reviews-item1,
+.reviews-item2,
+.reviews-item3 {
   width: 255px;
   height: 292px;
   border-radius: 15px;
 
   padding-left: 13px;
-
-  
-}  
-
-.reviews-item1{
-  background: linear-gradient(136.55deg, #00E5E6 7.29%, #00A8F7 26.04%, #9A76F9 62.5%, #CC5EC2 100%);
-
-box-shadow: 0px 14px 0px -5px #7B54B2, 0px 30px 0px -13px #533978;
-
-
-
 }
 
+.reviews-item1 {
+  background: linear-gradient(
+    136.55deg,
+    #00e5e6 7.29%,
+    #00a8f7 26.04%,
+    #9a76f9 62.5%,
+    #cc5ec2 100%
+  );
 
+  box-shadow: 0px 14px 0px -5px #7b54b2, 0px 30px 0px -13px #533978;
+}
 
-.reviews-text{
+.reviews-text {
   width: 228px;
-height: 112px;
-font-size: 24px;
-font-weight: 400;
-line-height: 28.13px;
+  height: 112px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.13px;
 
-margin-top: 49px;
+  margin-top: 49px;
 }
 
-.reviews-date{
+.reviews-date {
   color: var(--header-text);
   width: 36px;
-height: 16px;
-font-size: 14px;
-font-weight: 400;
-line-height: 16.41px;
+  height: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.41px;
 
-padding-top: 8px;
-margin-bottom: 47px;
+  padding-top: 8px;
+  margin-bottom: 47px;
 }
 
-.reviews-author{
+.reviews-author {
   display: flex;
 }
 
-.reviews-img{
+.reviews-img {
   margin-right: 5px;
   width: 33px;
   height: 33px;
 }
 
-.reviews-from-when{
+.reviews-from-when {
   color: var(--header-text);
   margin-top: 1px;
-  
 }
 
-.reviews-item2{
-  background: linear-gradient(136.55deg, #FF68B4 0%, #FF45E1 26.04%, #CE3AFF 62.84%, #8961FF 100%);
+.reviews-item2 {
+  background: linear-gradient(
+    136.55deg,
+    #ff68b4 0%,
+    #ff45e1 26.04%,
+    #ce3aff 62.84%,
+    #8961ff 100%
+  );
 
-  box-shadow:0px 14px 0px -5px  #9159B1, 0px 30px 0px -13px #61337C;
-
+  box-shadow: 0px 14px 0px -5px #9159b1, 0px 30px 0px -13px #61337c;
 }
 
-.reviews-item3{
-  background: linear-gradient(142.67deg, #FFE128 0%, #FF9B5C 30.21%, #FF8381 63.29%, #FF5489 100%);
+.reviews-item3 {
+  background: linear-gradient(
+    142.67deg,
+    #ffe128 0%,
+    #ff9b5c 30.21%,
+    #ff8381 63.29%,
+    #ff5489 100%
+  );
 
-  box-shadow: 0px 14px 0px -5px #B95A4C, 0px 30px 0px -13px #732F26;
-
+  box-shadow: 0px 14px 0px -5px #b95a4c, 0px 30px 0px -13px #732f26;
 }
 
+.order-wrapper {
+  background: url("../img/bacroundorder.png") no-repeat center/cover;
+  width: 1440px;
+  height: 509px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.order-title {
+  color: var(--nike-color);
+  font-family: "Playfair Display";
+  width: 130px;
+  height: 64px;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 63.98px;
+  align-self: center;
+
+  margin-top: 21px;
+  margin-bottom: 33px;
+}
+
+.input-email {
+  width: 690px;
+  height: 60px;
+  border-radius: 50px;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 32.81px;
+  border: none;
+  padding-left: 25px;
+}
+
+.order-form {
+  height: 354px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-field {
+  width: 580px;
+  height: 50px;
+  border-radius: 50px;
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.13px;
+  border: none;
+  padding-left: 25px;
+}
+
+.order-button {
+  background-color: var(--button-color);
+  color: var(--nike-color);
+  width: 248px;
+  height: 68px;
+  border-radius: 16px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.13px;
+  border: none;
+}
 
