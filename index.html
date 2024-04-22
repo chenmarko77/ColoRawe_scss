@@ -13,16 +13,16 @@
 
 </head>
   <body>
-    <header class="header">
+    <header id="header" class="header">
       <img class="header-nike" src="./img/nike.svg" alt="" />
       <nav class="header-menu">
         <ul class="header-list">
-          <li class="header-main"><a href="#" class="header-main-title">Main page</a></li>
-          <li class="header-benefits"><a href="">Benefits</a></li>
-          <li class="header-advantages"><a href="#">Advantages</a></li>
-          <li class="header-reviews"><a href="#">Reviews</a></li>
-          <li class="header-contacts"><a href="#">Contacts</a></li>
-          <li class="header-order"><a href="#">Order</a></li>
+          <li class="header-main"><a href="./index.html" class="header-main-title">Main page</a></li>
+          <li class="header-benefits"><a href="#header">Benefits</a></li>
+          <li class="header-advantages"><a href="#advantages">Advantages</a></li>
+          <li class="header-reviews"><a href="#reviews">Reviews</a></li>
+          <li class="header-contacts"><a href="#footer">Contacts</a></li>
+          <li class="header-order"><a href="#order">Order</a></li>
         </ul>
         <ul class="header-language">
             <li class="header-menu-ua"><a href="">Ua</a></li>
@@ -45,7 +45,7 @@
             Good luck finding your way in the world of custom sneakers.</p>
           <button class="main-button" type="button">Buy my Nike</button>
       </div>
-      <div class="benefits">
+      <div id="advantages" class="benefits">
         <div class="benefits-border">
           <div class="div-box">
             <h3 class="div-star-name">Premium Quality</h3>
@@ -62,7 +62,7 @@
         </div>
       </div>
 
-      <div class="reviews-wrapper">
+      <div id="reviews" class="reviews-wrapper">
       <h2 class="reviews-title">Reviews</h2>
       <div class="reviews">
         <ul class="reviews-list">
@@ -131,7 +131,8 @@ I use them actively, the paint is super.
       
       </div>
       </div>
-      <div class="order-wrapper">
+      <div id="order" class="order-wrapper">
+        <button class="confirm" type="button">Confirm</button>
         <h4 class="order-title">Order</h4>
         <form class="order-form" action="" name="order-form">
           <label for="">
@@ -155,5 +156,39 @@ I use them actively, the paint is super.
         </form>
       </div>
     </main>
+    <footer id="footer">
+      <div class="footer-top">
+      <ul class="footer-questions">
+        <li class="footer-text">
+          <p class="footer-item">Have a question?</p>
+        </li>
+        <li class="footer-text">
+          <p class="footer-item">Have a proposal for cooperation?</p>
+        </li>
+        <li class="footer-text">
+          <p class="footer-item">Advertising questions?</p>
+        </li>
+      </ul>
+      <ul class="footer-email">
+        <li class="footer-right-text"><a href="#" class="footer-right-item">ColoRawe_support@gmail.com</a></li>
+        <li class="footer-right-text"><a href="#" class="footer-right-item">ColoRawe_Cooperation@gmail.com</a></li>
+        <li class="footer-right-text"><a href="#" class="footer-right-item">ColoRawe_Advertising@gmail.com</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <ul class="footer-address">
+        <li class="footer-bottom-item">
+          <p class="footer-bottom-text">2022 ColoRawe @All rights reserved</p>
+        </li>
+        <li class="footer-bottom-item">
+          <p 
+          class="footer-bottom-text">United States</p>
+        </li>
+      </ul>
+      <div class="footer-right-text">
+        <p>С&R</p>
+      </div>
+    </div>
+    </footer>
   </body>
 </html>

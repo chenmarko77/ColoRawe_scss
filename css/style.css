@@ -6,6 +6,11 @@
   --nike-color: #ffffff;
   --button-color: #8e32c6;
   --main-text: #959595;
+  --footer-background: #021635;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -83,8 +88,6 @@ body {
   font-weight: 400;
   color: var(--nike-color);
 }
-
-
 
 .main-nike {
   color: var(--nike-color);
@@ -380,6 +383,21 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+
+.confirm {
+  background-color: var(--nike-color);
+  color: var(--main-text);
+  position: absolute;
+  width: 100.81px;
+  height: 33.67px;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 32.81px;
+  top: 130px;
+  left: 870px;
+  border-style: none;
 }
 
 .order-title {
@@ -439,3 +457,97 @@ body {
   border: none;
 }
 
+footer {
+  background-color: var(--footer-background);
+  width: 1440px;
+  height: 292px;
+  margin: 0 auto;
+}
+
+.footer-questions {
+  color: var(--nike-color);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.13px;
+  height: 28px;
+  width: 354px;
+}
+
+.footer-text:nth-child(1) {
+  margin-top: 45px;
+}
+
+.footer-text {
+  margin-bottom: 10px;
+}
+
+.footer-right-text:nth-child(1) {
+  margin-top: 45px;
+}
+
+.footer-email {
+  color: var(--nike-color);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.13px;
+  height: 28px;
+  width: 384px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.footer-right-text a {
+  color: var(--nike-color);
+}
+
+.footer-right-text {
+  margin-bottom: 10px;
+}
+
+.footer-top {
+  width: 1110px;
+  height: 169px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px var(--main-text) solid;
+
+  margin: 0 auto;
+}
+
+.footer-address {
+  color: var(--nike-color);
+  width: 291px;
+  height: 21px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.09px;
+  margin-top: 24px;
+}
+
+.footer-bottom {
+  width: 1110px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  background: url("../img/nike.svg") no-repeat;
+  background-position: 1015px -1px;
+  background-size: 108px 81px;
+}
+
+.footer-bottom-item {
+  margin-bottom: 7px;
+}
+
+.footer-right-text p {
+  color: var(--nike-color);
+  width: 60px;
+  height: 86px;
+  font-family: "PT Serif";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 31.8px;
+
+  margin-top: 62px;
+  margin-right: 10px;
+}
