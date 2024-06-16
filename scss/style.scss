@@ -1,11 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-.footer-bottom, .footer-top, .order-wrapper, .reviews-list, .reviews-wrapper, .benefits, .header {
+
+$header-background: #012d63;
+$header-text: #c7c7c7;
+$nike-color: #ffffff;
+$button-color: #8e32c6;
+$main-text: #959595;
+$footer-background: #021635;
+
+%flexmargin{
   display: flex;
   margin: 0 auto;
 }
 
-.footer-email, .order-form, .reviews-author, .reviews, .div-box, .benefits-border, .header-list, .header-language, .header-menu {
+%flex{
   display: flex;
+}
+
+@mixin size($width, $height){
+  width: $width;
+  height: $height;
 }
 
 html {
@@ -16,130 +29,151 @@ body {
   font-family: "Roboto";
 }
 
+
+
 .header {
-  width: 1440px;
-  height: 90px;
-  background-color: #012d63;
-}
-.header-menu {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 28.13px;
-}
-.header-menu a {
-  color: #c7c7c7;
-  text-decoration: none;
-}
-.header-nike {
-  margin: 16px 152px 16px 168px;
-}
-.header-main {
-  width: 112px;
-}
-.header-benefits {
-  width: 86px;
-}
-.header-advantages {
+  @extend %flexmargin;
+  @include size(1440px, 90px);
+  background-color: $header-background;
+
+  &-menu {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 28.13px;
+
+    & a {
+      color: $header-text;
+      text-decoration: none;
+    }
+  }
+  &-list,
+  &-language,
+  &-menu {
+    @extend %flex;
+  }
+
+  &-nike {
+    margin: 16px 152px 16px 168px;
+  }
+
+  &-main {
+    width: 112px;
+  }
+
+  &-benefits {
+    width: 86px;
+  }
+
+  &-advantages {
   width: 125px;
-}
-.header-reviews {
-  width: 88pxpx;
-}
-.header-contacts {
+  }
+
+  &-reviews {
+    width: 88pxpx;
+  }
+
+  &-contacts {
   width: 96px;
-}
-.header-order {
-  width: 58px;
-}
-.header-language {
-  width: 81px;
-  justify-content: space-between;
-  margin-left: 73px;
-}
-.header-list {
-  width: 701px;
-  justify-content: space-between;
-}
-.header-menu a:hover {
-  font-weight: 400;
-  color: #ffffff;
+  }
+
+  &-order {
+    width: 58px;
+  }
+
+  &-language {
+    width: 81px;
+    justify-content: space-between;
+  
+    margin-left: 73px;
+  }
+
+  &-list {
+    width: 701px;
+    justify-content: space-between;
+  }
+  &-menu a:hover {
+    font-weight: 400;
+    color: $nike-color;
+  }
 }
 
-.main-call_to_action {
-  background-image: url(../img/nike\ main.jpg);
-  width: 1440px;
-  height: 858px;
-  margin: 0 auto;
-  color: #ffffff;
-}
-.main-nike {
-  color: #ffffff;
-  width: 160px;
-  height: 120px;
-  margin-top: 94px;
-  margin-left: 170px;
-}
-.main-cqr {
-  font-family: "PT Serif";
-  font-size: 48px;
-  font-weight: 400;
-}
-.main-colorawe-title {
-  font-family: "Playfair Display";
-  font-size: 144px;
-  width: 640px;
-  height: 192px;
-  margin-top: 27px;
-  margin-left: 156px;
-  height: 150px;
-}
-.main .nike-container {
-  position: relative;
-}
-.main .text-c-and-r {
-  position: absolute;
-  bottom: -20px;
-  left: 190px;
-}
-.main-your-dream-nike-text {
-  font-family: "Playfair Display";
-  font-size: 72px;
-  width: 540px;
-  height: 96px;
-  margin-left: 156px;
-}
-.main-text {
-  font-size: 18px;
-  width: 508px;
-  height: 84px;
-  font-weight: 400;
-  line-height: 21.09px;
-  margin-left: 156px;
-  margin-bottom: 41px;
-}
-.main-button {
-  width: 254px;
-  height: 67px;
-  font-size: 24px;
-  border-radius: 10px;
-  color: #ffffff;
-  background-color: #8e32c6;
-  margin-left: 156px;
+.main{
+  &-call_to_action {
+    background-image: url(../img/nike\ main.jpg);
+    @include size(1440px, 858px);
+    margin: 0 auto;
+    color: $nike-color;
+  }
+  &-nike {
+    color: $nike-color;
+    @include size(160px, 120px);
+    margin-top: 94px;
+  
+    margin-left: 170px;
+  }
+  &-cqr {
+    font-family: "PT Serif";
+    font-size: 48px;
+    font-weight: 400;
+  }
+
+  &-colorawe-title {
+    font-family: "Playfair Display";
+    font-size: 144px;
+    @include size(640px, 192px);
+    margin-top: 27px;
+    margin-left: 156px;
+    height: 150px;
+  }
+  .nike-container {
+    position: relative;
+  }
+  .text-c-and-r {
+    position: absolute;
+    bottom: -20px;
+    left: 190px;
+  }
+  &-your-dream-nike-text {
+    font-family: "Playfair Display";
+    font-size: 72px;
+    @include size(540px, 96px);
+    margin-left: 156px;
+  }
+
+  &-text {
+    font-size: 18px;
+    @include size(508px, 84px);
+    font-weight: 400;
+    line-height: 21.09px;
+  
+    margin-left: 156px;
+    margin-bottom: 41px;
+  }
+  &-button {
+    @include size(254px, 67px);
+    font-size: 24px;
+    border-radius: 10px;
+    color: $nike-color;
+    background-color: $button-color;
+    margin-left: 156px;
+  }
 }
 
 .benefits {
   background-image: url(../img/Group\ 8\ 1.png);
-  width: 1440px;
-  height: 606px;
+  @include size(1440px, 606px);
+  @extend %flexmargin;
   justify-content: center;
   align-items: center;
 }
 
 .benefits-border {
-  border: 5px #8e32c6 solid;
+  border: 5px $button-color solid;
+  @extend %flex;
   justify-content: space-between;
+
   padding-top: 25px;
   padding-bottom: 25px;
   padding-left: 50px;
@@ -147,52 +181,47 @@ body {
 }
 
 .div-star {
-  width: 240px;
-  height: 240px;
+  @include size(240px, 240px);
 }
 
 .div-star-name {
-  color: #ffffff;
+  color: $nike-color;
   font-family: "Playfair Display";
   font-size: 36px;
   font-weight: 400;
   line-height: 47.99px;
   text-align: center;
-  width: 159px;
-  height: 102px;
+  @include size(159px, 102px);
 }
 
 .div-color {
-  width: 240px;
-  height: 240px;
+  @include size(240px, 240px);
 }
 
 .div-color-name {
   font-family: "Playfair Display";
-  color: #ffffff;
-  width: 161px;
-  height: 102px;
+  color: $nike-color;
+  @include size(161px, 102px);
   font-size: 36px;
   font-weight: 400;
   text-align: center;
 }
 
 .div-car {
-  width: 240px;
-  height: 240px;
+  @include size(240px, 240px);
 }
 
 .div-car-name {
   font-family: "Playfair Display";
-  color: #ffffff;
-  width: 151px;
-  height: 103px;
+  color: $nike-color;
+  @include size(151px, 103px);
   font-size: 36px;
   font-weight: 400;
   text-align: center;
 }
 
 .div-box {
+  @extend %flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -212,114 +241,136 @@ body {
 }
 
 .reviews-wrapper {
-  background: url("../img/reviewsbackground (1).png");
-  width: 1440px;
-  height: 520px;
+  background: url("../img/reviewsbackground\ \(1\).png");
+  @include size(1440px, 520px);
+  @extend %flexmargin;
   justify-content: center;
   flex-direction: column;
-  border: 2px solid #ffffff;
+  border: 2px solid $nike-color;
 }
 
 .reviews-title {
-  color: #ffffff;
+  color: $nike-color;
   font-family: "Playfair Display";
   font-size: 48px;
   font-weight: 400;
   line-height: 63.98px;
-  width: 175px;
-  height: 65px;
+  @include size(175px, 65px);
   align-self: center;
+
   margin-top: 24px;
   margin-bottom: 24px;
 }
 
 .reviews {
+  @extend %flex;
   background: url("../img/leaves.png") no-repeat bottom left;
-  width: 1440px;
-  height: 407px;
+  @include size(1440px, 407px);
 }
 
 .reviews-list {
-  color: #ffffff;
-  width: 951px;
-  height: 292px;
+  color: $nike-color;
+  @extend %flexmargin;
+  @include size(951px, 292px);
   border-radius: 15px;
+
   justify-content: space-between;
 }
 
 .reviews-item1 {
-  width: 255px;
-  height: 292px;
+  @include size(255px, 292px);
   border-radius: 15px;
   padding-left: 13px;
-  background: linear-gradient(136.55deg, #00e5e6 7.29%, #00a8f7 26.04%, #9a76f9 62.5%, #cc5ec2 100%);
+  background: linear-gradient(
+    136.55deg,
+    #00e5e6 7.29%,
+    #00a8f7 26.04%,
+    #9a76f9 62.5%,
+    #cc5ec2 100%
+  );
+
   box-shadow: 0px 14px 0px -5px #7b54b2, 0px 30px 0px -13px #533978;
 }
 
 .reviews-text {
-  width: 228px;
-  height: 112px;
+  @include size(228px, 112px);
   font-size: 24px;
   font-weight: 400;
   line-height: 28.13px;
+
   margin-top: 49px;
 }
 
 .reviews-date {
-  color: #c7c7c7;
-  width: 36px;
-  height: 16px;
+  color: $header-text;
+  @include size(36px, 16px);
   font-size: 14px;
   font-weight: 400;
   line-height: 16.41px;
+
   padding-top: 8px;
   margin-bottom: 47px;
 }
 
+.reviews-author {
+  @extend %flex;
+}
+
 .reviews-img {
   margin-right: 5px;
-  width: 33px;
-  height: 33px;
+  @include size(33px, 33px);
 }
 
 .reviews-from-when {
-  color: #c7c7c7;
+  color: $header-text;
   margin-top: 1px;
 }
 
 .reviews-item2 {
-  width: 255px;
-  height: 292px;
+  @include size(255px, 292px);
   border-radius: 15px;
   padding-left: 13px;
-  background: linear-gradient(136.55deg, #ff68b4 0%, #ff45e1 26.04%, #ce3aff 62.84%, #8961ff 100%);
+  background: linear-gradient(
+    136.55deg,
+    #ff68b4 0%,
+    #ff45e1 26.04%,
+    #ce3aff 62.84%,
+    #8961ff 100%
+  );
+
   box-shadow: 0px 14px 0px -5px #9159b1, 0px 30px 0px -13px #61337c;
 }
 
 .reviews-item3 {
-  width: 255px;
-  height: 292px;
+  @include size(255px, 292px);
   border-radius: 15px;
   padding-left: 13px;
-  background: linear-gradient(142.67deg, #ffe128 0%, #ff9b5c 30.21%, #ff8381 63.29%, #ff5489 100%);
+  background: linear-gradient(
+    142.67deg,
+    #ffe128 0%,
+    #ff9b5c 30.21%,
+    #ff8381 63.29%,
+    #ff5489 100%
+  );
+
   box-shadow: 0px 14px 0px -5px #b95a4c, 0px 30px 0px -13px #732f26;
 }
 
+
 .order-wrapper {
   background: url("../img/bacroundorder.png") no-repeat center/cover;
-  width: 1440px;
-  height: 509px;
+  @include size(1440px, 509px);
+  @extend %flexmargin;
   flex-direction: column;
   align-items: center;
   position: relative;
 }
 
 .confirm {
-  background-color: #ffffff;
-  color: #959595;
+  background-color: $nike-color;
+  color: $main-text;
   position: absolute;
-  width: 101px;
-  height: 34px;
+  @include size(101px, 34px);
   font-size: 28px;
   font-weight: 400;
   line-height: 32.81px;
@@ -329,21 +380,20 @@ body {
 }
 
 .order-title {
-  color: #ffffff;
+  color: $nike-color;
   font-family: "Playfair Display";
-  width: 130px;
-  height: 64px;
+  @include size(130px, 64px);
   font-size: 48px;
   font-weight: 400;
   line-height: 63.98px;
   align-self: center;
+
   margin-top: 21px;
   margin-bottom: 33px;
 }
 
 .input-email {
-  width: 690px;
-  height: 60px;
+  @include size(690px, 60px);
   border-radius: 50px;
   font-size: 28px;
   font-weight: 400;
@@ -354,14 +404,14 @@ body {
 
 .order-form {
   height: 354px;
+  @extend %flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
 .input-field {
-  width: 580px;
-  height: 50px;
+  @include size(580px, 50px);
   border-radius: 50px;
   font-family: "Roboto";
   font-size: 24px;
@@ -372,10 +422,9 @@ body {
 }
 
 .order-button {
-  background-color: #8e32c6;
-  color: #ffffff;
-  width: 248px;
-  height: 68px;
+  background-color: $button-color;
+  color: $nike-color;
+  @include size(248px, 68px);
   border-radius: 16px;
   font-size: 24px;
   font-weight: 400;
@@ -384,19 +433,17 @@ body {
 }
 
 footer {
-  background-color: #021635;
-  width: 1440px;
-  height: 292px;
+  background-color: $footer-background;
+  @include size(1440px, 292px);
   margin: 0 auto;
 }
 
 .footer-questions {
-  color: #ffffff;
+  color: $nike-color;
   font-size: 24px;
   font-weight: 400;
   line-height: 28.13px;
-  width: 354px;
-  height: 28px;
+  @include size(354px, 28px);
 }
 
 .footer-text:nth-child(1) {
@@ -412,20 +459,20 @@ footer {
 }
 
 .footer-email {
-  color: #ffffff;
+  color: $nike-color;
   font-size: 24px;
   font-weight: 400;
   line-height: 28.13px;
-  width: 384px;
+  @include size(384px, 28px);
   height: 28px;
-  height: 28px;
   width: 384px;
+  @extend %flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
 .footer-right-text a {
-  color: #ffffff;
+  color: $nike-color;
 }
 
 .footer-right-text {
@@ -433,16 +480,16 @@ footer {
 }
 
 .footer-top {
-  width: 1110px;
-  height: 169px;
+  @include size(1110px, 169px);
+  @extend %flexmargin;
   justify-content: space-between;
-  border-bottom: 1px #959595 solid;
+  border-bottom: 1px $main-text solid;
+
 }
 
 .footer-address {
-  color: #ffffff;
-  width: 291px;
-  height: 21px;
+  color: $nike-color;
+  @include size(291px, 21px);
   font-size: 18px;
   font-weight: 400;
   line-height: 21.09px;
@@ -451,6 +498,7 @@ footer {
 
 .footer-bottom {
   width: 1110px;
+  @extend %flexmargin;
   justify-content: space-between;
   background: url("../img/nike.svg") no-repeat;
   background-position: 1015px -1px;
@@ -462,13 +510,13 @@ footer {
 }
 
 .footer-right-text p {
-  color: #ffffff;
-  width: 60px;
-  height: 86px;
+  color: $nike-color;
+  @include size(60px, 86px);
   font-family: "PT Serif";
   font-size: 24px;
   font-weight: 400;
   line-height: 31.8px;
+
   margin-top: 62px;
   margin-right: 10px;
 }
